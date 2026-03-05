@@ -1,4 +1,4 @@
-baseURL ="https://senecaengineering.org/"
+baseURL = "https://senecaengineering.org/"
 publishDir = "docs"
 relativeURLs = false
 canonifyURLs = true
