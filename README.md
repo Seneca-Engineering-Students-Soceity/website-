@@ -46,6 +46,141 @@
                                                             ```bash
                                                           hugo version
 
+                                                          1. Go to the Downloads folder
+
+                                                    Open your terminal and run:
+                                                    
+                                                    cd ~/Downloads
+                                                    2. Download Hugo Extended
+                                                    
+                                                    Run the following command to download the latest Hugo Extended release:
+                                                    
+                                                    wget https://github.com/gohugoio/hugo/releases/latest/download/hugo_extended_Linux-64bit.tar.gz
+                                                    3. Extract the file
+                                                    
+                                                    After downloading, extract the archive:
+                                                    
+                                                    tar -xvzf hugo_extended_Linux-64bit.tar.gz
+                                                    
+                                                    This will create a file called:
+                                                    
+                                                    hugo
+                                                    4. Move Hugo to the system path
+                                                    
+                                                    Move the Hugo binary to /usr/local/bin so it can be used globally:
+                                                    
+                                                    sudo mv hugo /usr/local/bin/
+                                                    5. Verify the installation
+                                                    
+                                                    Check if Hugo is installed correctly:
+                                                    
+                                                    hugo version
+                                                    
+                                                    You should see something like:
+                                                    
+                                                    hugo v0.xxx.x+extended linux/amd64
+                                                    
+                                                    Important: the output must include the word:
+                                                    
+                                                    extended
+                                                    
+                                                    If you see extended, the installation was successful.
+                                                    
+                                                    Running the Website Locally
+                                                    
+                                                    After installing Hugo, you can start the local development server.
+                                                    
+                                                    Navigate to the project folder:
+                                                    
+                                                    cd engineering-society
+                                                    
+                                                    Run the Hugo server:
+                                                    
+                                                    hugo server
+                                                    
+                                                    Open the website in your browser:
+                                                    
+                                                    http://localhost:1313
+                                                    
+                                                    The website will automatically reload when you make changes.
+                                                    
+                                                    To stop the server press:
+                                                    
+                                                    CTRL + C
+                                                    Building the Website
+                                                    
+                                                    Before pushing changes to GitHub, you must build the site.
+                                                    
+                                                    Run:
+                                                    
+                                                    hugo --minify
+                                                    
+                                                    This command generates the static website inside the:
+                                                    
+                                                    docs/
+                                                    
+                                                    folder.
+                                                    
+                                                    This folder is used by GitHub Pages to deploy the website.
+                                                    
+                                                    Publishing Changes
+                                                    
+                                                    After building the site, push the changes to GitHub.
+                                                    
+                                                    Run the following commands:
+                                                    
+                                                    git add .
+                                                    git commit -m "update website"
+                                                    git push
+                                                    
+                                                    GitHub Pages will automatically deploy the new version of the website.
+                                                    
+                                                    You can then view the updated site at:
+                                                    
+                                                    https://senecaengineering.org
+                                                    Important Workflow
+                                                    
+                                                    Every time you update the website follow this workflow:
+                                                    
+                                                    Edit content
+                                                    
+                                                    Preview locally
+                                                    
+                                                    hugo server
+                                                    
+                                                    Build the website
+                                                    
+                                                    hugo --minify
+                                                    
+                                                    Push changes
+                                                    
+                                                    git add .
+                                                    git commit -m "describe your changes"
+                                                    git push
+                                                    Troubleshooting
+                                                    Website not updating
+                                                    
+                                                    Make sure you ran:
+                                                    
+                                                    hugo --minify
+                                                    
+                                                    before pushing to GitHub.
+                                                    
+                                                    CSS or styling not updating
+                                                    
+                                                    Clear your browser cache using:
+                                                    
+                                                    CTRL + SHIFT + R
+                                                    Hugo command not found
+                                                    
+                                                    Make sure Hugo is installed correctly and located in:
+                                                    
+                                                    /usr/local/bin/hugo
+                                                    
+                                                    You can verify this by running:
+                                                    
+                                                    which hugo
+
                                                           CLONE THE PROJECT
 
                                                         Clone the repository:
